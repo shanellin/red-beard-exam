@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" property="set:viewport" content="width=400, shrink-to-fit=no, user-scalable=0">  
+  <script src="/scripts/vendor.js"></script>
+  <link rel="stylesheet" href="/styles/vendor.css">
+  <% if (pageData.hasCSS) { %>
+    <link rel="stylesheet" href="/styles/<%- pageData.CssRoute %>.css" />
+  <% } %>
+  <title><%- pageData.pageTitle %></title>
+</head>
+<body>
+  <%- include(pageData.viewName) %>
+</body>
+</html>

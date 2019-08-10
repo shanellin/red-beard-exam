@@ -1,0 +1,22 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+<script src="https://unpkg.com/http-vue-loader"></script>
+<script src="/scripts/map/TaxiFare.js"></script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL-it0quLGuMWUMh3JOp-bFVs5VwkrGfk&libraries=places&sensor=true"></script>
+<div id="cue_route">
+  <my-route></my-route>
+  <my-location></my-location>
+</div>
+<script type="text/javascript">
+  var pos_bus = new Vue();
+  new Vue({
+    el: '#cue_route',
+    components: {
+      'my-route': httpVueLoader('/scripts/map/cue_route.vue'),
+      'my-location': httpVueLoader('/scripts/map/geolocation.vue')
+    }
+  });
+  Doc = id => document.getElementById(id);
+  DocStyle = id => document.getElementById(id).style;
+  DocClass = id => document.getElementsByClassName(id);
+</script>

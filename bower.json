@@ -1,0 +1,24 @@
+{
+  "name": "bluenet-web-example1",
+  "description": "",
+  "main": "server.js",
+  "authors": ["shanelin <yushanelin@gmail.com>"],
+  "license": "MIT",
+  "homepage": "https://github.com/shanellin/red-beard-exam",
+  "private": true,
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": ["dist/css/bootstrap.css", "dist/js/bootstrap.js"],
+      "dependencies": {
+        "jquery": "*",
+        "popper.js":"*"
+      }
+    }
+  }
+}
