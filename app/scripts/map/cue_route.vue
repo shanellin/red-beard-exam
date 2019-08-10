@@ -65,7 +65,7 @@
           <div>
             <div>{{item.name}}</div>
             <div>{{item.vicinity}}</div>
-            <div>距離：{{item.distance.display}} | 價位：{{item.price_level == -1 ? '無提供' : maneyRange[item.price_level-1].text}}</div>
+            <div>距離：{{item.distance.display}} | 價位：{{item.price_level == -1 ? '無提供' : maneyRange[item.price_level-1].text}} | {{star_.repeat(item.rating)}}{{item.rating}}</div>
           </div>
         </li>
       </ul>
@@ -85,6 +85,7 @@
     data(){
       return {
         //公用列表
+        star_:'★',
         imgSrc:"/images/map/",
         imgLast:".png",
         route_tool_icon:{changeRoute:"chang_station_icon",startIcon:"ic_location_start",endIcon:"ic_location_end"},
